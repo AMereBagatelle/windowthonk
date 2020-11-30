@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.amerebagatelle.windowthonk.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "CorrectMonitorMixin",
+    "WindowTitleMixin"
+  ],
+  "client": [
+    "WMClassMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "windowthonk",
+  "version": "${version}",
+  "name": "WindowThonk",
+  "description": "Fixes some of the more strange things about MC window creation and management.",
+  "authors": [
+    "AMereBagatelle"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/windowthonk/icon.png",
+  "environment": "client",
+  "entrypoints": {
+  },
+  "mixins": [
+    "windowthonk.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.8",
+    "minecraft": "1.16.4"
+  }
+}
