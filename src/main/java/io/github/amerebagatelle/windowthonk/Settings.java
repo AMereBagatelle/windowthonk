@@ -4,6 +4,7 @@ import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -21,6 +22,13 @@ public class Settings {
         try {
             if (!settingsFile.exists()) {
                 settingsFile.createNewFile();
+                FileWriter writer = new FileWriter(settingsFile);
+                writer.write("---- WindowThonk Properties ----\n");
+                writer.write("changeWMClass=true\n");
+                writer.write("changeWindowTitle=true\n");
+                writer.write("openOnHoveredMonitor=true\n");
+                writer.flush();
+                writer.close();
             }
             properties.load(new FileReader(settingsFile));
             changeWMClass = Boolean.parseBoolean(properties.getProperty("changeWMClass", Boolean.toString(true)));
